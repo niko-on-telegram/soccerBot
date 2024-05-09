@@ -29,3 +29,23 @@ async def channel_post_handler(message: types.Message, bot: Bot, target_channel_
         ),
         caption=backed_msg,
     )
+
+
+@router.edited_channel_post()
+async def channel_post_edited_hanlder(message: types.Message, bot: Bot, target_channel_id: int):
+    logging.info(f"Forwarding message {message.message_id}")
+    xs = message.text.split('\n')
+    target = "Powered by InPlayGuru"
+    index = xs.index(target)
+    parsed_text = '\n'.join(xs[index+1:]).strip()
+    if not parsed_text:
+        return
+
+    await bot.send_photo(
+        target_channel_id,
+        URLInputFile(
+            "https://img.freepik.com/free-photo/view-soccer-ball-field_23-2150995795.jpg?size=626&ext=jpg&ga=GA1.1"
+            ".553209589.1715126400&semt=ais_user"
+        ),
+        caption=f"Got update from message edit:\n{parsed_text}",
+    )
