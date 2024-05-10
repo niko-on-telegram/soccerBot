@@ -39,6 +39,11 @@ async def channel_post_edited_hanlder(message: types.Message, bot: Bot, target_c
     index = xs.index(target)
     parsed_text = '\n'.join(xs[index+1:]).strip()
     if not parsed_text:
+        logging.debug("Parsed text empty, skipping")
+        return
+
+    if 'Hit' not in parsed_text:
+        logging.debug("Hit not found, skipping")
         return
 
     await bot.send_photo(
