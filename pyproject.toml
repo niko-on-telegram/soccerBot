@@ -7,7 +7,7 @@ name = "football_bot"
 description = ""
 version = "0.0.1"
 authors = [
-    { name = "Niko", email = "nikoontelegram@gmail.com" },
+    { name = "Niko", email = "nkbolg@gmail.com" },
 ]
 license = { text = "MIT" }
 classifiers = [
