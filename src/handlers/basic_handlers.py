@@ -24,6 +24,6 @@ async def channel_post_handler(message: types.Message, bot: Bot, target_channel_
     backed_msg = format_message(message.text)
     await bot.send_photo(
         target_channel_id,
-        FSInputFile(os.path.join('imgs', backed_msg.img_path)),
+        FSInputFile(os.path.join('imgs/second_image_set', backed_msg.img_path)),
         caption=backed_msg.text,
     )

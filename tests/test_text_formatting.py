@@ -1,53 +1,52 @@
 from src.utils import format_message
 
-data = '''🔔 Dominator xG Alert
+data = '''🔔 Second Half Goal Signal [Beta]
 
-🌎 Copa Sudamericana (3rd vs 4th)
-Nacional Potosi vs Sportivo Trinidense
+🇧🇷 Brazil Serie A (2nd vs 11th)
+Palmeiras vs EC Juventude
 
-Timer: 68'
-Last Goal: Home at 68' (0 minutes ago)
+Timer: Half Time
+Last Goal: None
 
-Goals: 1 - 1
-xG: 1.21 - 0.27
-Corners: 7 - 1
-Momentum: 51 - 39
-Shots On Target: 5 - 2
-Shots Off Target: 18 - 3
-Attacks: 106 - 24
-Dangerous Attacks: 57 - 10
-Yellow Cards: 1 - 1
+Goals: 0 - 0
+xG: 0.83 - 0.22
+Corners: 6 - 2
+Momentum: 38 - 46
+Shots On Target: 3 - 3
+Shots Off Target: 10 - 5
+Attacks: 63 - 36
+Dangerous Attacks: 41 - 14
+Yellow Cards: 0 - 1
 Red Cards: 0 - 0
 Penalties: 0 - 0
-Substitutions: 2 - 2
-Possession %: 76 - 24
-Crossing Accuracy %: 26 - 0
-➕ Live Stats (https://inplayguru.com/inplay?caid=telegram_btn_inline#cURhRWVVUU1ZU009)
+Substitutions: 0 - 0
+Possession %: 61 - 39
+Crossing Accuracy %: 30 - 20
+➕ Live Stats
 
 1X2 Pre-Match Odds:
-1.40 5.00 7.00
+1.40 4.33 9.00
 1X2 Live Odds:
-1.83 2.30 11.00
-Over/Under 2.50 Odds:
-1.44 2.63
+1.67 3.00 8.00
+Over/Under 0.50 Odds:
+1.25 4.00
 
-📈 Matched: £233,652
+📈 Matched: £937,524
 ⸻⸻⸻⸻⸻⸻
-Powered by InPlayGuru (https://inplayguru.com/?mtm_campaign=telegram_banner)
+Powered by InPlayGuru
 
 ✅ Hit
-HT Score: 0-1
-FT Score: 2-1'''
+HT Score: 0-0
+FT Score: 3-1'''
 
-target = '''⚽️⚡️Dominator xG Alert
-🌎 Copa Sudamericana
-*Nacional Potosi vs Sportivo Trinidense*
-Time: 68'
-Score: 1 - 1
-*xG: 1.21 - 0.27*'''
+target = '''⚽️⚡️Second Half Goal Signal
+🇧🇷 Brazil Serie A
+*Palmeiras vs EC Juventude*
+Match Time: Half Time
+Current Score: 0 - 0'''
 
 
 def test_format():
     res = format_message(data)
     assert res.text == target
-    assert res.img_path == 'dominator.jpg'
+    assert res.img_path == 'second_half_goal.jpg'
