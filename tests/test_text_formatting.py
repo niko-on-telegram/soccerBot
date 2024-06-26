@@ -40,7 +40,7 @@ HT Score: 0-0
 FT Score: 3-1'''
 
 target = '''⚽️⚡️Second Half Goal Signal
-🇧🇷 Brazil Serie A
+*Brazil Serie A*
 *Palmeiras vs EC Juventude*
 Match Time: Half Time
 Current Score: 0 - 0'''

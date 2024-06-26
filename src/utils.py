@@ -22,7 +22,7 @@ def format_message(text: str) -> FormattedMsg:
     if alert_name.endswith('[Beta]'):
         alert_name = alert_name.removesuffix('[Beta]').strip()
 
-    league = xs[2].split(' (')[0]
+    league = xs[2].split(' (')[0].split(' ', 1)[1]
     rivals = xs[3]
     timer_line = xs[5]
     timer_value = timer_line.removeprefix('Timer: ')
@@ -30,7 +30,7 @@ def format_message(text: str) -> FormattedMsg:
     score = score_line.removeprefix("Goals: ")
     formatted_msg = template.format(
         alert_name=alert_name,
-        league=league,
+        league=md.bold(league),
         rivals=md.bold(rivals),
         timer_value=timer_value,
         score=score,
